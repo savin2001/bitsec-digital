@@ -24,11 +24,11 @@ const Products = () => {
                 <Grid
                     container
                     spacing={{ xs: 2, md: 3 }}
-                    columns={{ xs: 4, sm: 8 }}
+                    columns={{ xs: 4, sm: 8, md:15 }}
                     sx={{ bordercolor: "primary.light" }}
                 >
                     {/* Category section */}
-                    <Grid item xs={2} sm={2} md={4}>
+                    <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }} md={3}>
                         <Paper
                             sx={{
                                 display: "flex",
@@ -107,19 +107,21 @@ const Products = () => {
                                 </Box>
                             </Box>
                         </Paper>
+                        <Box sx={{ width: "100%",
+                                    height: "30px", }}/>
                         <Paper
                             sx={{
                                 display: "flex",
                                 flexDirection: "column",
                                 flexWrap: "wrap",
                                 "& > :not(style)": {
-                                    mt: 2,
+                                    mt: 1,
                                     width: "100%",
                                     height: "100%",
                                 },
                             }}
                         >
-                            <Typography sx={{ textAlign: "left" }} variant="h5">
+                            <Typography sx={{ textAlign: "center", p: 1 }} variant="h5">
                                 Sort by
                             </Typography>
                             <Box sx={{ textAlign: "left", p: 1 }}>
@@ -129,7 +131,7 @@ const Products = () => {
                                         Sub-category
                                     </Typography>
                                 </Box>
-                                <Box sx={{ textAlign: "center" }}>
+                                <Box sx={{ textAlign: "center", p: 1 }}>
                                     <Typography variant="p">
                                         Sub-category
                                     </Typography>
@@ -137,12 +139,12 @@ const Products = () => {
                             </Box>
                             <Box sx={{ textAlign: "left", p: 1 }}>
                                 <Typography variant="h6">Age</Typography>
-                                <Box sx={{ textAlign: "center" }}>
+                                <Box sx={{ textAlign: "center", p: 1 }}>
                                     <Typography variant="p">
                                         Sub-category
                                     </Typography>
                                 </Box>
-                                <Box sx={{ textAlign: "center" }}>
+                                <Box sx={{ textAlign: "center", p: 1 }}>
                                     <Typography variant="p">
                                         Sub-category
                                     </Typography>
@@ -150,12 +152,12 @@ const Products = () => {
                             </Box>
                             <Box sx={{ textAlign: "left", p: 1 }}>
                                 <Typography variant="h6">Rating</Typography>
-                                <Box sx={{ textAlign: "center" }}>
+                                <Box sx={{ textAlign: "center", p: 1 }}>
                                     <Typography variant="p">
                                         Sub-category
                                     </Typography>
                                 </Box>
-                                <Box sx={{ textAlign: "center" }}>
+                                <Box sx={{ textAlign: "center", p: 1 }}>
                                     <Typography variant="p">
                                         Sub-category
                                     </Typography>
@@ -165,12 +167,12 @@ const Products = () => {
                                 <Typography variant="h6">
                                     Shipped from
                                 </Typography>
-                                <Box sx={{ textAlign: "center" }}>
+                                <Box sx={{ textAlign: "center", p: 1 }}>
                                     <Typography variant="p">
                                         Sub-category
                                     </Typography>
                                 </Box>
-                                <Box sx={{ textAlign: "center" }}>
+                                <Box sx={{ textAlign: "center", p: 1 }}>
                                     <Typography variant="p">
                                         Sub-category
                                     </Typography>
@@ -178,12 +180,12 @@ const Products = () => {
                             </Box>
                             <Box sx={{ textAlign: "left", p: 1 }}>
                                 <Typography variant="h6">Discount</Typography>
-                                <Box sx={{ textAlign: "center" }}>
+                                <Box sx={{ textAlign: "center", p: 1 }}>
                                     <Typography variant="p">
                                         Sub-category
                                     </Typography>
                                 </Box>
-                                <Box sx={{ textAlign: "center" }}>
+                                <Box sx={{ textAlign: "center", p: 1 }}>
                                     <Typography variant="p">
                                         Sub-category
                                     </Typography>
@@ -192,7 +194,7 @@ const Products = () => {
                         </Paper>
                     </Grid>
                     {/* Main products section */}
-                    <Grid item xs={2} sm={6} md={4}>
+                    <Grid item xs={4} sm={8} md={12}>
                         <Paper
                             elevation={2}
                             sx={{
@@ -257,22 +259,22 @@ const Products = () => {
                                 <Grid
                                     container
                                     spacing={{ xs: 2, md: 3 }}
-                                    columns={{ xs: 4, sm: 8, md: 16 }}
+                                    columns={{ xs: 6, sm: 6, md: 4 }}
                                     sx={{ mt: 15 }}
                                 >
                                     {Array.from(Array(4)).map((_, index) => (
                                         <Grid
                                             item
-                                            xs={2}
-                                            sm={4}
-                                            md={4}
+                                            xs={3}
+                                            sm={2}
+                                            md={1}
                                             key={index}
                                         >
                                             <Card>
                                                 <CardMedia
                                                     component="img"
-                                                    height="150"
-                                                    image="/static/images/cards/contemplative-reptile.jpg"
+                                                    height="175"
+                                                    image="https://i.etsystatic.com/17434867/r/il/1d4e7f/1479707788/il_fullxfull.1479707788_bry2.jpg"
                                                     alt="stock image"
                                                 />
                                                 <CardContent>
@@ -284,7 +286,7 @@ const Products = () => {
                                                         variant="h6"
                                                         component="div"
                                                     >
-                                                        Product name
+                                                        Red okre Maasai Earrings | Maasai Mara Earrings
                                                     </Typography>
 
                                                     <Rating
@@ -298,7 +300,7 @@ const Products = () => {
                                                         }}
                                                         color="secondary"
                                                     >
-                                                        $ 4.20
+                                                        $ 13.99
                                                     </Typography>
                                                 </CardContent>
                                                 <CardActions>
@@ -354,22 +356,22 @@ const Products = () => {
                                 <Grid
                                     container
                                     spacing={{ xs: 2, md: 3 }}
-                                    columns={{ xs: 4, sm: 8, md: 16 }}
+                                    columns={{ xs: 6, sm: 6, md: 4 }}
                                     sx={{ mt: 15 }}
                                 >
                                     {Array.from(Array(4)).map((_, index) => (
                                         <Grid
                                             item
-                                            xs={2}
-                                            sm={4}
-                                            md={4}
+                                            xs={3}
+                                            sm={2}
+                                            md={1}
                                             key={index}
                                         >
                                             <Card>
                                                 <CardMedia
                                                     component="img"
-                                                    height="150"
-                                                    image="/static/images/cards/contemplative-reptile.jpg"
+                                                    height="175"
+                                                    image="https://i.etsystatic.com/17434867/r/il/ad0808/1532319595/il_fullxfull.1532319595_iqvv.jpg"
                                                     alt="stock image"
                                                 />
                                                 <CardContent>
@@ -378,10 +380,10 @@ const Products = () => {
                                                             textAlign: "left",
                                                         }}
                                                         gutterBottom
-                                                        variant="h6"
+                                                        variant="p"
                                                         component="div"
                                                     >
-                                                        Product name
+                                                        Dashiki Snoodie | Ankara Snoodie Jumper | Africa Inspired Patterns | Unisex | Black
                                                     </Typography>
 
                                                     <Rating
@@ -395,7 +397,7 @@ const Products = () => {
                                                         }}
                                                         color="secondary"
                                                     >
-                                                        $ 4.20
+                                                        $ 69.95
                                                     </Typography>
                                                 </CardContent>
                                                 <CardActions>
@@ -450,22 +452,22 @@ const Products = () => {
                                 <Grid
                                     container
                                     spacing={{ xs: 2, md: 3 }}
-                                    columns={{ xs: 4, sm: 8, md: 16 }}
+                                    columns={{ xs: 6, sm: 6, md: 4 }}
                                     sx={{ mt: 15 }}
                                 >
                                     {Array.from(Array(4)).map((_, index) => (
                                         <Grid
                                             item
-                                            xs={2}
-                                            sm={4}
-                                            md={4}
+                                            xs={3}
+                                            sm={2}
+                                            md={1}
                                             key={index}
                                         >
                                             <Card>
                                                 <CardMedia
                                                     component="img"
-                                                    height="150"
-                                                    image="/static/images/cards/contemplative-reptile.jpg"
+                                                    height="172"
+                                                    image="https://i.etsystatic.com/17434867/r/il/3a0a9d/3568424169/il_fullxfull.3568424169_stlr.jpg"
                                                     alt="stock image"
                                                 />
                                                 <CardContent>
@@ -474,10 +476,10 @@ const Products = () => {
                                                             textAlign: "left",
                                                         }}
                                                         gutterBottom
-                                                        variant="h6"
+                                                        variant="p"
                                                         component="div"
                                                     >
-                                                        Product name
+                                                        On SALE African Red Pendant Scarf Drop Beaded Multicolored Necklace | Maasai Necklace | Stylish | Gift for Her | Masai Mara
                                                     </Typography>
 
                                                     <Rating
@@ -491,7 +493,7 @@ const Products = () => {
                                                         }}
                                                         color="secondary"
                                                     >
-                                                        $ 4.20
+                                                        $ 34.99
                                                     </Typography>
                                                 </CardContent>
                                                 <CardActions>

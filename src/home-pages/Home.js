@@ -13,6 +13,9 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import "../App.css";
+import model from "../media/model.png";
+import customer from "../media/customer-service.png";
+import simpsec from "../media/simple-secure.png";
 
 const Home = () => {
     return (
@@ -20,26 +23,66 @@ const Home = () => {
             <Container
                 sx={{ flexGrow: 1, width: "100%", height: 100 }}
             ></Container>
-            <Container sx={{ flexGrow: 1, top: 1000 }}>
+            {/* Landing page */}
+            <Container sx={{}}>
                 <Grid
                     container
                     spacing={{ xs: 2, md: 3 }}
-                    columns={{ xs: 4, sm: 8 }}
-                    sx={{ bgcolor: "primary.light" }}
+                    columns={{ xs: 4, sm: 8, md: 8 }}
                 >
-                    <Grid item xs={2} sm={4} md={4}>
+                    <Grid item xs={4} sm={8} md={4}>
                         <Box
                             sx={{
-                                width: 300,
-                                height: 300,
-                                backgroundColor: "primary.contrastText",
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "flex-start",
+                                justifyContent: "flex-start",
+                                alignSelf: "center",
+                                p: 1,
+                                m: 1,
                             }}
                         >
-                            <Typography>xs=2</Typography>
+                            <Typography
+                                variant="h4"
+                                sx={{ textAlign: "left", m: 2 }}
+                            >
+                                African Collection 2022
+                            </Typography>
+                            <Typography
+                                variant="h3"
+                                color="secondary"
+                                sx={{ textAlign: "left", m: 2 }}
+                            >
+                                NEW ARRIVALS
+                            </Typography>
+                            <Typography
+                                variant="h4"
+                                sx={{ textAlign: "left", m: 2 }}
+                            >
+                                starting from $ 5.00
+                            </Typography>
+                            <Box sx={{ flexGrow: 1, my: 4, m: 2 }}>
+                                <Link
+                                    to={`/products`}
+                                    style={{
+                                        textDecoration: "none",
+                                        color: "inherit",
+                                    }}
+                                >
+                                    <Button
+                                        size="large"
+                                        variant="contained"
+                                        color="secondary"
+                                        bgcolor="secondary"
+                                    >
+                                        SHOP NOW
+                                    </Button>
+                                </Link>
+                            </Box>
                         </Box>
                     </Grid>
-                    <Grid item xs={2} sm={4} md={4}>
-                        <Typography>xs=2</Typography>
+                    <Grid item xs={4} sm={8} md={4} fitContent>
+                        <img src={model} alt="model" />
                     </Grid>
                 </Grid>
             </Container>
@@ -65,26 +108,27 @@ const Home = () => {
                                 <CardMedia
                                     component="img"
                                     height="140"
-                                    image="/static/images/cards/contemplative-reptile.jpg"
-                                    alt="stock image"
+                                    image="https://i.etsystatic.com/17434867/r/il/9fff97/1532353867/il_fullxfull.1532353867_bg3w.jpg"
+                                    alt="bracelet"
                                 />
                                 <CardContent>
                                     <Typography
                                         sx={{ textAlign: "left" }}
                                         gutterBottom
-                                        variant="h5"
+                                        variant="h6"
                                         component="div"
                                     >
-                                        Product name
+                                        Kenyan Flag bracelet | Beaded Bracelet
                                     </Typography>
 
                                     <Typography
                                         sx={{ textAlign: "left" }}
                                         color="text.secondary"
                                     >
-                                        Product description Lorem ipsum dolor
-                                        sit amet consectetur adipisicing elit.
-                                        Accusantium?
+                                        Show your love for Kenya by getting this
+                                        beautiful Piece. We can also custom make
+                                        any for your Country. Go on and get
+                                        yours!
                                     </Typography>
                                     <Rating
                                         name="read-only"
@@ -95,7 +139,7 @@ const Home = () => {
                                         sx={{ textAlign: "left" }}
                                         color="secondary"
                                     >
-                                        $ 4.20
+                                        $ 29.95
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
@@ -112,7 +156,7 @@ const Home = () => {
                                             color="secondary"
                                             bgcolor="secondary"
                                         >
-                                            Add to Cart
+                                            View product
                                         </Button>
                                     </Link>
                                 </CardActions>
@@ -135,45 +179,42 @@ const Home = () => {
                 <Grid
                     container
                     spacing={{ xs: 2, md: 3 }}
-                    columns={{ xs: 4, sm: 8, md: 16 }}
+                    columns={{ xs: 6, sm: 6, md: 6 }}
+                    sx={{ mt: 15 }}
                 >
-                    {Array.from(Array(4)).map((_, index) => (
-                        <Grid item xs={2} sm={4} md={4} key={index}>
-                            <Card sx={{ maxWidth: 345 }}>
+                    {Array.from(Array(6)).map((_, index) => (
+                        <Grid item xs={3} sm={2} md={1} key={index}>
+                            <Card>
                                 <CardMedia
                                     component="img"
-                                    height="140"
-                                    image="/static/images/cards/contemplative-reptile.jpg"
-                                    alt="stock image"
+                                    height="150"
+                                    image="https://i.etsystatic.com/17434867/r/il/d4c634/2490833996/il_fullxfull.2490833996_g1w9.jpg"
+                                    alt="Maasai shuka"
                                 />
                                 <CardContent>
                                     <Typography
-                                        sx={{ textAlign: "left" }}
+                                        sx={{
+                                            textAlign: "left",
+                                        }}
                                         gutterBottom
-                                        variant="h5"
+                                        variant="p"
                                         component="div"
                                     >
-                                        Product
+                                        Blue Red Maasai Shuka |Camping Shawl
                                     </Typography>
-                                    <Typography
-                                        sx={{ textAlign: "left" }}
-                                        color="text.secondary"
-                                    >
-                                        Product description Lorem ipsum dolor
-                                        sit amet consectetur adipisicing elit.
-                                        Accusantium?
-                                    </Typography>
+
                                     <Rating
                                         name="read-only"
                                         value={3}
-                                        sx={{ align: "left" }}
                                         readOnly
                                     />
                                     <Typography
-                                        sx={{ textAlign: "left" }}
+                                        sx={{
+                                            textAlign: "left",
+                                        }}
                                         color="secondary"
                                     >
-                                        $ 6.90
+                                        $ 49.95
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
@@ -190,7 +231,7 @@ const Home = () => {
                                             color="secondary"
                                             bgcolor="secondary"
                                         >
-                                            Add to Cart
+                                            View product
                                         </Button>
                                     </Link>
                                 </CardActions>
@@ -231,42 +272,66 @@ const Home = () => {
                 <Grid
                     container
                     spacing={{ xs: 2, md: 3 }}
-                    columns={{ xs: 4, sm: 8, md: 16 }}
+                    columns={{ xs: 4, sm: 8, md: 8 }}
                 >
-                    {Array.from(Array(2)).map((_, index) => (
-                        <Grid item xs={2} sm={4} md={8} key={index}>
-                            <Card sx={{ maxWidth: "100%" }}>
-                                <CardMedia
-                                    component="img"
-                                    height="140"
-                                    image="/static/images/cards/contemplative-reptile.jpg"
-                                    alt="stock image"
-                                />
-                                <CardContent>
-                                    <Typography
-                                        sx={{ textAlign: "left" }}
-                                        gutterBottom
-                                        variant="h5"
-                                        component="div"
-                                    >
-                                        Customer Service
-                                    </Typography>
-
-                                    <Typography
-                                        sx={{ textAlign: "left" }}
-                                        color="text.secondary"
-                                    >
-                                        Lorem ipsum dolor sit, amet consectetur
-                                        adipisicing elit. Sunt fugit officiis
-                                        exercitationem voluptas nesciunt
-                                        repellat nostrum, tempore explicabo fuga
-                                        magni, animi, quibusdam rerum facilis
-                                        accusantium quasi ex! Ad, culpa! Nobis!
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                    ))}
+                    <Grid item xs={4} sm={4} md={4}>
+                        <Card sx={{ maxWidth: 500 }}>
+                            <CardMedia
+                                component="img"
+                                height="375"
+                                image={customer}
+                                alt="green iguana"
+                            />
+                            <CardContent>
+                                <Typography
+                                    gutterBottom
+                                    variant="h5"
+                                    component="div"
+                                >
+                                    Customer Service
+                                </Typography>
+                                <Typography
+                                    variant="body2"
+                                    color="text.secondary"
+                                >
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Aenean commodo ligula eget
+                                    dolor. Aenean massa. Cum sociis natoque
+                                    penatibus et magnis dis parturient montes,
+                                    nascetur ridiculus mus.t
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                    <Grid item xs={4} sm={4} md={4}>
+                        <Card sx={{ maxWidth: 500 }}>
+                            <CardMedia
+                                component="img"
+                                height="375"
+                                image={simpsec}
+                                alt="green iguana"
+                            />
+                            <CardContent>
+                                <Typography
+                                    gutterBottom
+                                    variant="h5"
+                                    component="div"
+                                >
+                                    Simple and Secure
+                                </Typography>
+                                <Typography
+                                    variant="body2"
+                                    color="text.secondary"
+                                >
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Aenean commodo ligula eget
+                                    dolor. Aenean massa. Cum sociis natoque
+                                    penatibus et magnis dis parturient montes,
+                                    nascetur ridiculus mus.t
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
                 </Grid>
             </Container>
 
@@ -305,7 +370,7 @@ const Home = () => {
                                         component="img"
                                         height="140"
                                         image="/static/images/cards/contemplative-reptile.jpg"
-                                        alt="stock image"
+                                        alt="logos"
                                     />
                                     <CardContent>
                                         <Typography

@@ -16,7 +16,7 @@ import Product from "./home-pages/Product"
 const theme = createTheme({
     palette: {
         primary: {
-            light: "#bcaaa4",
+            light: "#979696",
             main: "#fff",
             dark: "#000",
             contrastText: "#C8A988",
