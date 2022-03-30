@@ -124,7 +124,13 @@ export default function PrimarySearchAppBar() {
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
-            <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+            {" "}
+            <Link
+                to={`/login`}
+                style={{ textDecoration: "none", color: "inherit" }}
+            >
+                <MenuItem onClick={handleMenuClose}>Log In</MenuItem>
+            </Link>
             <MenuItem onClick={handleMenuClose}>My account</MenuItem>
         </Menu>
     );
@@ -180,7 +186,7 @@ export default function PrimarySearchAppBar() {
                 </MenuItem>
             </Link>
             <Link
-                to={`/profile`}
+                to={`/login`}
                 style={{ textDecoration: "none", color: "inherit" }}
             >
                 <MenuItem onClick={handleProfileMenuOpen}>
@@ -193,7 +199,7 @@ export default function PrimarySearchAppBar() {
                     >
                         <AccountCircle />
                     </IconButton>
-                    <p>Profile</p>
+                    <p>Log in</p>
                 </MenuItem>
             </Link>
         </Menu>
@@ -358,25 +364,18 @@ export default function PrimarySearchAppBar() {
                                     </Badge>
                                 </IconButton>
                             </Link>
-                            <Link
-                                to={`/profile`}
-                                style={{
-                                    textDecoration: "none",
-                                    color: "inherit",
-                                }}
+
+                            <IconButton
+                                size="large"
+                                edge="end"
+                                aria-label="account of current user"
+                                aria-controls={menuId}
+                                aria-haspopup="true"
+                                onClick={handleProfileMenuOpen}
+                                color="inherit"
                             >
-                                <IconButton
-                                    size="large"
-                                    edge="end"
-                                    aria-label="account of current user"
-                                    aria-controls={menuId}
-                                    aria-haspopup="true"
-                                    onClick={handleProfileMenuOpen}
-                                    color="inherit"
-                                >
-                                    <AccountCircle />
-                                </IconButton>
-                            </Link>
+                                <AccountCircle />
+                            </IconButton>
                         </Box>
                         <Box sx={{ display: { xs: "flex", md: "none" } }}>
                             <IconButton

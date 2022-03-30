@@ -12,7 +12,6 @@ import {
     Rating,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import "../App.css";
 import model from "../media/model.png";
 import customer from "../media/customer-service.png";
 import simpsec from "../media/simple-secure.png";
@@ -24,7 +23,7 @@ const Home = () => {
                 sx={{ flexGrow: 1, width: "100%", height: 100 }}
             ></Container>
             {/* Landing page */}
-            <Container sx={{}}>
+            <Container >
                 <Grid
                     container
                     spacing={{ xs: 2, md: 3 }}
@@ -103,7 +102,7 @@ const Home = () => {
                     columns={{ xs: 4, sm: 8, md: 16 }}
                 >
                     {Array.from(Array(4)).map((_, index) => (
-                        <Grid item xs={2} sm={4} md={4} key={index}>
+                        <Grid item xs={2} sm={8} md={4} key={index}>
                             <Card sx={{ maxWidth: 345 }}>
                                 <CardMedia
                                     component="img"

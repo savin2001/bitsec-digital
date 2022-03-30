@@ -11,6 +11,8 @@ import Favorite from "./customer-pages/Favorite";
 import Profile from "./customer-pages/Profile";
 import Products from "./home-pages/Products";
 import Product from "./home-pages/Product"
+import Login from "./authentication/Login"
+import Register from "./authentication/Register";
 
 // This function changes the overall color of the whole application
 const theme = createTheme({
@@ -42,6 +44,8 @@ const App = () => {
                         <Route path="/" element={<Home />} />
                         <Route path="cart" element={<Cart />} />
                         <Route path="favorite" element={<Favorite />} />
+                        <Route path="login" element={<Login />} />
+                        <Route path="register" element={<Register />} />
                         <Route path="profile" element={<Profile />} />
                         <Route path="products" element={<Products />} />
                         <Route path="product" element={<Product />} />
