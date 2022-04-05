@@ -1,12 +1,9 @@
-import {
-    Card,
-    CardContent,
-    Container,
-    Grid,
-    Typography,
-} from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Footer = () => {
     return (
@@ -15,43 +12,38 @@ const Footer = () => {
                 width: "100%",
                 height: "100%",
                 paddingY: 3,
-                backgroundColor: "primary.dark",
+                backgroundColor: "primary.light",
             }}
         >
-            <Container sx={{ flexGrow: 1, my: 3 }}>
+            <Container sx={{ flexGrow: 1, my: 3,  }}>
                 <Grid
                     container
-                    spacing={{ xs: 2, md: 3 }}
-                    columns={{ xs: 4, sm: 8, md: 16 }}
+                    sx={{display: "flex", justifyContent: 'center'}}
                 >
-                    {Array.from(Array(4)).map((_, index) => (
-                        <Grid item xs={2} sm={4} md={4} key={index}>
-                            <Card
-                                sx={{
-                                    maxWidth: 345,
-                                    backgroundColor: "primary.dark",
-                                    color: "primary.main",
-                                }}
-                            >
-                                <CardContent>
-                                    <Typography
-                                        sx={{ textAlign: "left" }}
-                                        gutterBottom
-                                        variant="h5"
-                                        component="div"
-                                    >
-                                        Footer Heads
-                                    </Typography>
-                                    <Typography sx={{ textAlign: "left" }}>
-                                        Product description Lorem ipsum dolor
-                                        sit amet consectetur adipisicing elit.
-                                        Accusantium?
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                    ))}
+                    <Grid item xs={1} sm={1} md={1}>
+                        <Box>
+                            <FacebookIcon />
+                        </Box>
+                    </Grid>
+                    <Grid item xs={1} sm={1} md={1}>
+                        <Box>
+                            <TwitterIcon />
+                        </Box>
+                    </Grid>
+                    <Grid item xs={1} sm={1} md={1}>
+                        <Box>
+                            <LinkedInIcon />
+                        </Box>
+                    </Grid>
                 </Grid>
+                <Typography
+                            variant="caption"
+                            sx={{ p: 3, m: 3, fontWeight: "light" }}
+                            gutterBottom
+                            component="div"
+                        >
+                            ©2021 by Bitsec Digital
+                        </Typography>
             </Container>
         </Box>
     );
