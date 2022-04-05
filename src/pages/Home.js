@@ -385,6 +385,7 @@ const Home = () => {
                             </Grid>
                             <Grid item xs={4} sm={8} md={6}>
                                 <img
+                                height="100%"
                                     src="https://images.unsplash.com/photo-1536148935331-408321065b18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZ3JhbW1lcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
                                     alt=""
                                 />
